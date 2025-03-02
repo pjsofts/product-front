@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 const URL = import.meta.env.VITE_API_URL
-
+type Product = {name:string, price: number}
 function App() {
   const [products, setProducts] = useState([])
 
@@ -19,7 +17,7 @@ function App() {
   return (
     <div>
       Salam
-      {products.map((product: any) => <div style={{border: '1px solid white', margin: '10px', padding: '10px'}}>
+      {products.map((product: Product) => <div style={{border: '1px solid white', margin: '10px', padding: '10px'}}>
         {product.name}
         <div>{product.price}</div>
         </div>) }
