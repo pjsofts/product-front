@@ -7,7 +7,7 @@ function App() {
   const [products, setProducts] = useState([])
 
   useEffect(()=>{
-    fetch(`${URL}/products`)
+    fetch(`${URL}/products/`)
     .then(res => res.json())
     .then(data => {
       setProducts(data.data)
